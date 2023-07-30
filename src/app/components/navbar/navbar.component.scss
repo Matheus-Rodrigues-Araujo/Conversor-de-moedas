@@ -1,0 +1,37 @@
+.navbar-container{
+    background-color: var(--orange);
+
+}
+
+.navbar-container .container{
+    color: var(--white);
+    header{
+        font-size: 5rem;
+        a{
+            color: white;
+            font-weight:normal;
+            font-weight: 600;
+            span{
+                color: white;
+                font-weight: 700;
+            }
+        }
+    }
+
+    ul{
+
+        .nav-item{
+            font-size: 3rem;
+            font-weight: 700;
+            display: flex;
+            margin-block:auto;
+        }
+
+        .active{
+            background-color: #1E1E1E;
+        }
+        .active:hover{
+            outline: 2px solid white;
+        }
+    }
+}

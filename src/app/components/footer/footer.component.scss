@@ -1,0 +1,17 @@
+.footer-container{
+    background-color: var(--lightdark);
+    padding-block: 20px;
+    z-index: 100;
+    
+}
+
+.footer-container .container{
+    footer{
+        font-size: 3rem;
+       div{
+        span{
+            color: var(--white);
+        }
+       }
+    }
+}

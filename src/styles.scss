@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --orange: #D95B00;
+    --lightorange:#ff7a1c;
+    --red: rgb(214, 7, 3);
+    --lightdark: #1E1E1E;
+    --gra: rgb(120, 117, 117);
+    --white: white;
+    --green: rgb(100, 250, 10);
+    font-size: 6px;
+    font-family: 'Mulish', 'Nunito Sans', 'Inter', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+}
