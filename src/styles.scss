@@ -24,3 +24,13 @@ html{
 body{
     background-color: black;
 }
+
+@media screen and (max-width: 780px) {
+    .hero-content{
+
+        .hero-brand{
+           h1{
+               font-size: 6rem; // 48px
+        }}
+}
+}

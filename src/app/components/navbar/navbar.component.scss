@@ -6,6 +6,9 @@
 .navbar-container .container{
     color: var(--white);
     header{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-block: 1rem;
         font-size: 5rem;
         a{
             color: white;
@@ -34,4 +37,50 @@
             outline: 2px solid white;
         }
     }
+}
+
+@media screen and (max-width: 720px){
+    .navbar-container .container{
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        header{
+            padding-block: 0;
+            min-width: 100vw;
+            // flex-wrap:nowrap;
+            // justify-content: center;
+        }
+       
+        .brand-container{
+            background-color: var(--orange);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        ul{
+            background-color: black;
+            width: 100%;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            .nav-item{
+                font-size: 3rem;
+                font-weight: 700;
+                display: flex;
+                margin-block:auto;
+            }
+    
+            .active{
+                color: var(--orange);
+                background-color: black;
+                outline: 2.5px outset var(--orange);
+            }
+            .active:hover{
+                outline: 2.5px solid var(--lightorange);
+            }
+        }
+    }
+    
 }

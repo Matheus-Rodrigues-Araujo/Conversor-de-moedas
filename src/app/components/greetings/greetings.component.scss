@@ -2,8 +2,9 @@
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
+    margin-top: 10px;
 
     .background-video{
         top: 0;
@@ -17,27 +18,33 @@
 
     .hero-content{
         z-index: 1000;
-        margin-top: 5%;
-
-            
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // display: grid;
+        gap: 2%;
+    }
              .hero-brand{
-                width: 40%;
+                // width: 40%;
                 margin-inline: auto;
-                border-bottom: 2px solid white;
+                // border-bottom: 2px solid white;
                 h1{
-                    font-size: 15rem;
+                    font-size: 10rem; // 90px
                     color: var(--white);
+                    text-decoration: underline;
                     text-align: center;
                     margin-inline: auto;
              }}
 
              .hero-description{
-                width: 40%;
+                width: 50%;
                 margin: 10px auto;
                 h2{
-                    font-size: 4rem;
+                    font-size: 3.5rem; //25px
                     color: var(--white);
                     text-align: justify;
+                    font-weight: 400;
                 }
             }
 
@@ -50,7 +57,7 @@
                         border: none;
                         color: var(--white);
                         background-color: var(--orange);
-                        font-size: 4rem;
+                        font-size: 4rem; //24px
                         font-weight: 700;
                         border-radius: .7rem;
                         padding: 10px;
@@ -64,6 +71,42 @@
             }
 
         
+    
+}
+
+@media screen and (max-width: 720px) {
+    .hero{
+        min-height: 40vh;
+        margin-top: 100px;
+        
+        .hero-content{
+            width: 100%;
+            .hero-brand{
+                h1{
+                    font-size: 6rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .hero-description{
+            h2{
+                font-size: 3rem;
+                font-weight: 300;
+            }
+        }
+
+        .hero-button{
+            margin-bottom: 20px;
+            .button-container{
+                a{
+                    font-size: 3rem; //24px
+                    padding: 5px;
+
+                }
+        }
     }
 
+    }
+    
 }
