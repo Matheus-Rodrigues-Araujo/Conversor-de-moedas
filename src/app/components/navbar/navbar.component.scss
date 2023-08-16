@@ -28,6 +28,10 @@
             font-weight: 700;
             display: flex;
             margin-block:auto;
+        
+            &:hover{
+                background-color: #1E1E1E;
+            }
         }
 
         .active{

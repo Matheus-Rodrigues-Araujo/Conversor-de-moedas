@@ -1,7 +1,14 @@
 <section class="converter" id="converter" >
+  
     <h3>Currency Converter</h3>
 
     <div class="card-container d-flex justify-content-around gap-5" >
+        <ul>
+            <li *ngFor="let item of symbolsList?.symbols | keyvalue" >
+                <p>{{item.key}}</p>
+                <p>{{item.value}}</p>
+            </li>
+        </ul>
         <div class="card" >
             <div class="card-body" >
                 <select class="form-select" >
@@ -11,12 +18,19 @@
                     <option value="3" >China</option>
 
                 </select>
-
-                <div class="card-content" >
-                    <p class="card-text">1.00</p>
-                </div>
-                    
+                    <input id="input1" [(ngModel)] = "input1" name="input1" (ngModelChange)="onChangeValue()" class="card-content w-100 text-center" type="text"/>
             </div>
+        </div>
+
+        <div style="margin-block: auto; display: flex; flex-flow: column wrap; gap: 10px;" >
+            <button id="arrow-left" >
+                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button id="arrow-right" >
+                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </button>  
+
         </div>
 
         <div class="card" >
@@ -31,11 +45,13 @@
 
                 </select>
 
-                <div class="card-content" >
-                    <p class="card-text">0.25</p>
-                </div>
+                    <input id="input2" [value]="input2" name="input2" class="card-content w-100 text-center" type="text" />
             </div>
         </div>
+    </div>
+
+    <div class="w-100 d-flex justify-content-center my-5" >
+        <button class="save-button" >Save</button>
     </div>
 
 </section>
