@@ -1,0 +1,24 @@
+<section>
+    <h3>Coins</h3>
+    <table>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+        </tr>
+      
+        <tr *ngFor="let coin of coins">
+            <!-- <pre>{{ coin | json }}</pre> -->
+            <td>{{coin.code}}</td>
+            <td>{{coin['description'].description}}</td>
+
+        </tr>
+      </table>
+</section>
+
+<!-- {
+    "code": "AED",
+    "description": {
+      "description": "United Arab Emirates Dirham",
+      "code": "AED"
+    }
+  } -->

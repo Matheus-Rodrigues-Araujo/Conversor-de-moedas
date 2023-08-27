@@ -1,4 +1,4 @@
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 :root{
     --orange: #D95B00;
     --lightorange:#ff7a1c;
@@ -36,3 +36,6 @@ body{
         }}
 }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
