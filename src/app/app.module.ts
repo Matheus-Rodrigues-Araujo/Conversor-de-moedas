@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import {MatPaginatorModule} from '@angular/material/paginator'
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
@@ -16,7 +15,9 @@ import { GreetingsComponent } from './components/greetings/greetings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoinsComponent } from './components/coins/coins.component';
 import { TableModule } from 'primeng/table';
+
 import {MatTableModule} from '@angular/material/table'
+import {MatPaginatorModule} from '@angular/material/paginator'
 
 @NgModule({
   declarations: [
@@ -35,10 +36,10 @@ import {MatTableModule} from '@angular/material/table'
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatPaginatorModule,
     MatFormFieldModule,
     TableModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
